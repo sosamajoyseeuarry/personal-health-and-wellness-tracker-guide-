@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f2f5ed">
+  <title>Daywell | Daily wellness</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="shell">
+    <header class="topbar">
+      <div class="brand"><span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20c4.2-2.2 6-5.5 6-9.5A7.5 7.5 0 0 0 5.5 8C5 13 7 17.5 12 20Z"/><path d="M9 13c1.1-.2 2.5-1.1 3.5-2.5"/></svg></span>daywell</div>
+      <div class="top-note"><span aria-hidden="true"></span>A little care goes a long way</div>
+    </header>
+
+    <section class="intro" aria-labelledby="page-title">
+      <div>
+        <p class="eyebrow">Your wellness, at your pace</p>
+        <h1 id="page-title">Your daily reset</h1>
+        <p class="date-line" id="today-date"></p>
+      </div>
+      <div class="daily-score" aria-live="polite">
+        <div class="score-label"><span>Daily check-in</span><span id="score-text">0 of 6 done</span></div>
+        <div class="track" role="progressbar" aria-label="Daily checklist progress" aria-valuemin="0" aria-valuemax="6" aria-valuenow="0"><div class="track-fill" id="score-fill"></div></div>
+      </div>
+    </section>
+
+    <div class="layout">
+      <div class="column">
+        <section class="panel" aria-labelledby="checklist-title">
+          <div class="panel-head">
+            <div class="panel-title"><span class="section-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m9 11 3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg></span><div><h2 id="checklist-title">Daily wellness checklist</h2><p class="subtle">Six small steps count</p></div></div>
+          </div>
+          <div class="checklist">
+            <label class="check-row"><input type="checkbox" data-habit="water"><span class="checkmark" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><path d="m3 8 3.2 3.2L13 4.5"/></svg></span><span class="check-copy"><strong>Drinking water</strong><small>Drink enough water throughout the day to stay hydrated.</small></span><span class="category-tag">Daily Wellness</span></label>
+            <label class="check-row"><input type="checkbox" data-habit="move"><span class="checkmark" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><path d="m3 8 3.2 3.2L13 4.5"/></svg></span><span class="check-copy"><strong>Daily exercise</strong><small>Spend 10–15 minutes walking, stretching, or doing simple exercises.</small></span><span class="category-tag">Physical Activity</span></label>
+            <label class="check-row"><input type="checkbox" data-habit="rest"><span class="checkmark" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><path d="m3 8 3.2 3.2L13 4.5"/></svg></span><span class="check-copy"><strong>Sleep tracking</strong><small>Record your sleep and make time for a restful night.</small></span><span class="category-tag">Sleep &amp; Rest</span></label>
+            <label class="check-row"><input type="checkbox" data-habit="eating"><span class="checkmark" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><path d="m3 8 3.2 3.2L13 4.5"/></svg></span><span class="check-copy"><strong>Healthy eating</strong><small>Choose a balanced meal with fruits or vegetables when you can.</small></span><span class="category-tag">Nutrition</span></label>
+            <label class="check-row"><input type="checkbox" data-habit="hygiene"><span class="checkmark" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><path d="m3 8 3.2 3.2L13 4.5"/></svg></span><span class="check-copy"><strong>Personal hygiene</strong><small>Wash your hands, brush your teeth, and follow your daily routine.</small></span><span class="category-tag">Daily Care</span></label>
+            <label class="check-row"><input type="checkbox" data-habit="mental"><span class="checkmark" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><path d="m3 8 3.2 3.2L13 4.5"/></svg></span><span class="check-copy"><strong>Mental wellness</strong><small>Pause to relax, connect with someone, or check in with yourself.</small></span><span class="category-tag">Mental Wellbeing</span></label>
+          </div>
+        </section>
+
+        <section class="panel" aria-labelledby="sleep-title">
+          <div class="panel-head">
+            <div class="panel-title"><span class="section-icon yellow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20.9 13A8.5 8.5 0 0 1 11 3.1 8.5 8.5 0 1 0 20.9 13Z"/><path d="m16 3 .5 1.5L18 5l-1.5.5L16 7l-.5-1.5L14 5l1.5-.5L16 3Z"/></svg></span><div><h2 id="sleep-title">Sleep last night</h2><p class="subtle">Notice your rest, not perfection</p></div></div>
+          </div>
+          <div class="sleep-body">
+            <div class="sleep-reading"><output class="sleep-total" id="sleep-value" for="sleep-range">8</output><span class="sleep-unit">hours</span></div>
+            <input class="sleep-range" id="sleep-range" type="range" min="0" max="14" step="0.5" value="8" aria-label="Hours of sleep last night">
+            <div class="sleep-scale"><span>0 hr</span><span>7–9 hr suggested</span><span>14 hr</span></div>
+            <p class="sleep-note" id="sleep-note">A steady sleep routine can support your energy and focus.</p>
+          </div>
+        </section>
+      </div>
+
+      <div class="column">
+        <section class="panel" aria-labelledby="water-title">
+          <div class="panel-head">
+            <div class="panel-title"><span class="section-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22a7 7 0 0 0 7-7c0-4-7-13-7-13S5 11 5 15a7 7 0 0 0 7 7Z"/><path d="M9 16a3 3 0 0 0 3 3"/></svg></span><div><h2 id="water-title">Water check</h2><p class="subtle">A glass at a time</p></div></div>
+          </div>
+          <div class="water-body">
+            <div class="water-summary"><span class="water-total" id="water-total">0</span><span class="water-goal">/ <span id="water-goal-label">2,000</span> ml</span></div>
+            <div class="water-visual" role="progressbar" aria-label="Water intake progress" aria-valuemin="0" aria-valuemax="2000" aria-valuenow="0"><div class="water-fill" id="water-fill"></div></div>
+            <div class="water-footer">
+              <label class="reminder-toggle"><input id="reminder-toggle" type="checkbox"><span>Hourly water nudge</span></label>
+              <div class="water-actions">
+                <button class="icon-button" id="remove-water" type="button" aria-label="Remove one glass of water" title="Remove one glass"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14"/></svg></button>
+                <button class="add-button" id="add-water" type="button">+ 250 ml</button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="panel" aria-labelledby="move-title">
+          <div class="panel-head">
+            <div class="panel-title"><span class="section-icon coral" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="6.5" cy="4.5" r="2"/><path d="m9 10 2-2 3 2 2 4h4M5 12l4-2 3 4-2 5M12 14l4 1 2 4M5 12l-2 4"/></svg></span><div><h2 id="move-title">A little movement</h2><p class="subtle">Find what feels good today</p></div></div>
+          </div>
+          <div class="exercise-body">
+            <div class="tip-card" aria-live="polite"><p class="tip-label" id="tip-category">Gentle reset</p><p class="tip-text" id="tip-text">Take a 10-minute walk outside. A little daylight and fresh air can shift your whole afternoon.</p></div>
+            <div class="exercise-bottom"><span class="exercise-meta" id="tip-meta">Easy · 10 minutes</span><button class="tip-button" id="next-tip" type="button">Another idea</button></div>
+          </div>
+        </section>
+
+        <section class="panel" aria-labelledby="note-title">
+          <div class="panel-head">
+            <div class="panel-title"><span class="section-icon yellow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v2M5.6 5.6 7 7M3 12h2m14 0h2m-3.4-6.4L17 7"/><path d="M8 16a6 6 0 1 1 8 0c-.8.7-1 1.4-1 2h-6c0-.6-.2-1.3-1-2ZM9 21h6"/></svg></span><div><h2 id="note-title">A gentle reminder</h2><p class="subtle">Wellness isn't one-size-fits-all</p></div></div>
+          </div>
+          <div class="sleep-body"><p class="subtle" style="font-size:13px;line-height:1.65;margin:0">Your needs can change day to day. Use these goals as friendly prompts, and choose what works for you.</p></div>
+        </section>
+      </div>
+    </div>
+    <footer class="footer"><span>Your check-in is saved on this device.</span><span>Listen to your body and take it one day at a time.</span></footer>
+  </main>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
